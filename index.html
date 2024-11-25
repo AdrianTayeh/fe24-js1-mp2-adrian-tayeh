@@ -3,43 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>Pig Dice Game</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="die one">
-        <div></div>
+    <div id="game">
+        <h1>Pig Dice Game</h1>
+        <div>
+            <label for="playerName">Enter your name: </label>
+            <input type="text" id="playerName">
+            <button id="startGame">Start Game</button>
+        </div>
+        <div id="gameInfo" style="display: none;">
+            <p>Player: <span id="displayName"></span></p>
+            <p>Total Score: <span id="totalScore">0</span></p>
+            <p>Round Score: <span id="roundScore">0</span></p>
+            <p>Rounds Played: <span id="roundsPlayed">0</span></p>
+            <p>Dice Number: <span id="diceNumber">0</span></p>
+            <div class="die" id="dice">
+               
+            </div>
+            <button id="rollDice">Roll Dice</button>
+            <button id="freezeScore">Freeze Score</button>
+        </div>
+        <div id="gameOver" style="display: none;">
+            <h2>Game Over!</h2>
+            <p>You reached 100 points in <span id="finalRounds">0</span> rounds.</p>
+        </div>
     </div>
-    <div class="die two">
-        <div></div>
-        <div></div>
-    </div>
-    <div class="die three">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="die four">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="die five">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="die six">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+    <script type="module" src="./js/game.js"></script>
 </body>
 </html>
